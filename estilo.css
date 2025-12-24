@@ -1,0 +1,306 @@
+/* 1. SELETORES GLOBAIS E RESET */
+
+*{
+    
+    margin: 0;
+    padding: 0;
+    /* Garantindo que o padding e border não aumentaram o tamanho final */
+    box-sizing: border-box;
+
+}
+
+body {
+    
+    font-family: Arial, Helvetica, sans-serif; /* Fonte de alta legibilidade */
+    line-height: 1.8;
+    font-size: 18px;
+    
+    color: #222;
+    background-color: #f0f0f0;
+
+} 
+
+/* 2. SEÇÃO TOPO */
+
+.skip-link {
+    
+    position: absolute;
+    top: -100px;
+    left: 0;
+    padding: 10px 20px;
+    z-index: 1000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0 0 5px 0;
+
+    background: #ffc72c;
+    color: #003366;
+}
+
+.skip-link:focus {
+
+    top: 0;
+    outline: 3px solid white;
+}
+
+.secao-topo{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 45vh;    
+    padding: 40px 20px;
+
+    background-color: #003366; /* Azul Marinho (Confiança) */
+    color: #ffffff;
+}
+
+.container-topo {
+
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.subtitulo-topo {
+
+    line-height: 1.6;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.secao-topo h1 {
+
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+/* 3. ESTRUTURA DO GUIA */
+
+.guia-conteudo {
+
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.secao-guia {
+
+    margin-bottom: 50px;
+    padding: 40px;
+    border-radius: 12px;
+
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra leve pra profundidade */
+}
+
+
+.titulo-secao {
+    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    
+    color: #003366;
+    font-size: 1.8rem;
+    border-bottom: 3px solid #00bfff;
+}
+
+.bloco-texto {
+    
+    margin-bottom: 35px !important;
+}
+
+.icone-aviso {
+
+    margin-right: 10px;
+    font-style: normal;
+}
+
+h3 {
+
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    
+    color: #003366;
+}
+
+h4 {
+
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: bold;
+}
+
+p {
+
+    margin-bottom: 20px !important;
+    display: block;
+}
+
+p:last-child {
+
+    margin-bottom: 0;
+}
+
+ul, ol {
+    
+    margin: 20px 0 20px 35px;
+}
+
+li {
+
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+.caixa-destaque ul {
+
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    
+    .secao-guia {
+    
+        padding: 20px;
+    }
+    .secao-topo h1 {
+        
+        font-size: 2rem;
+    }
+}
+
+
+
+/* 4. CAIXAS DE ALERTA E DESTAQUE */
+
+.caixa-destaque {
+
+    margin: 30px 0;
+    padding: 25px;
+    border-left: 6px solid #228b22; /* Verde (Sucesso/Ação) */
+    border-radius: 4px;
+
+    background-color: #e8f5e9;
+}
+
+.caixa-curiosidade{
+
+    margin: 30px 0;
+    padding: 25px;
+    border-left: 6px solid #8e44ad; /* Roxo vibrante para curiosidade */
+    border-radius: 4px;
+    line-height:  1.6;
+
+    background-color: #f5eef8;
+}
+
+.caixa-curiosidade strong{
+
+    color: #6c3483;
+}
+
+.regra-de-ouro {
+
+    border-left-color: #ffc72c; /* Amarelo (Alerta) */
+    background-color: #fff9e6; 
+}
+
+.acao-final {
+
+    border-left-color: #00bfff; /* Ciano (Finalização) */
+    background-color: #e1f5fe;
+}
+
+.botao-expandir, .gatilho-dica {
+
+    display: block;
+    width: 100%;
+    padding: 18px;
+    transition: background-color 0.3s ease;
+    text-align: left;
+    border-radius: 8px 8px 0 0;
+
+    
+    border: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    
+    background-color: #003366 !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.botao-expandir:hover, .gatilho-dica:hover {
+
+    background-color: #00509d !important;
+    color: #ffffff !important;
+}
+
+.botao-expandir:focus, .gatilho-dica:focus {
+
+    outline: 4px solid #ffc72c;
+    outline-offset: 2px;
+}
+
+.conteudo-escondido, .caixa-dica {
+
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 0 0 8px 8px;
+
+    border: 2px solid #003366;
+    border-top: none;
+    
+    background-color: #f9fbfd;
+}
+
+.conteudo-escondido p:last-child, .gatilho-dica p:last-child {
+
+    margin-bottom: 0;
+}
+
+
+/* 6. CONCLUSÃO E RODAPÉ */
+
+.conclusao {
+
+    padding: 50px 30px;
+    text-align: center;
+    border-radius: 12px;
+    margin-top: 40px;
+
+    background-color: #003366;
+    color: #ffffff;
+}
+
+.titulo-fim {
+
+    color: #00bfff;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+footer{
+
+    padding: 30px;
+    text-align: center;
+
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.autor-rodape {
+
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
